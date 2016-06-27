@@ -16,10 +16,3 @@ public struct Configuration {
     public static var localizeString: (key: String) -> String = { $0 }
     
 }
-
-// Define an replacement for `NSLocalizedString(_: comment:)` to keep using xcode tools for managing strings localization.
-func NSLocalizedString(_ key: String, comment: String) -> String {
-    
-    return Configuration.localizeString(key: key)
-
-}
